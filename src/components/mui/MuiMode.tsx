@@ -1,5 +1,5 @@
-import { useTheme } from "@mui/material/styles";
-import { Typography } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
 function MuiMode() {
   const theme = useTheme();

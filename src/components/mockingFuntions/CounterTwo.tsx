@@ -1,11 +1,15 @@
-import React from "react";
+import React from 'react';
 type CounterTwoProps = {
   count: number;
   handleIncrement?: () => void;
   handleDecrement?: () => void;
 };
 
-function CounterTwo({ count, handleIncrement, handleDecrement }: CounterTwoProps) {
+function CounterTwo({
+  count,
+  handleIncrement,
+  handleDecrement,
+}: CounterTwoProps) {
   return (
     <div>
       <h1>Counter Two</h1>

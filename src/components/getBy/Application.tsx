@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function Application() {
   return (
@@ -12,7 +12,13 @@ function Application() {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Fullname" value="Igor" onChange={() => {}} />
+          <input
+            type="text"
+            id="name"
+            placeholder="Fullname"
+            value="Igor"
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>
@@ -31,7 +37,8 @@ function Application() {
         </div>
         <div>
           <label>
-            <input type="checkbox" id="terms" /> I agree to the terms and conditions
+            <input type="checkbox" id="terms" /> I agree to the terms and
+            conditions
           </label>
         </div>
         <button disabled>Submit</button>
