@@ -26,7 +26,8 @@ and input events are fired and the selection and value on input are manipulated 
 user-event is automatically installed in React Projects: "@testing-library/user-event": "^14.4.3"
 React has with version 13, upgrade it to version 14.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+import user from '@testing-library/user-event';
 
-User Interactions:
-Pointer Interactions:
-Keyboard Interactions:
+Pointer Interactions: user.click() | user.dbClick() | user.tripleClick() | user.hover() | user.unhover()
+Keyboard Interactions: user.type(inputElement, "value") | user.tab()
+

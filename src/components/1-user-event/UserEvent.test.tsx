@@ -3,10 +3,10 @@ import UserEvent from './UserEvent';
 import user from '@testing-library/user-event';
 
 describe('Counter', () => {
-  test('renders correctly', () => {
+  test('component renders correctly', () => {
     render(<UserEvent />);
-    const countElement = screen.getByRole('heading');
-    expect(countElement).toBeInTheDocument();
+    const heading1 = screen.getByRole('heading', { level: 1 });
+    expect(heading1).toBeInTheDocument();
     const incrementButton = screen.getByRole('button', { name: 'Increment' });
     expect(incrementButton).toBeInTheDocument();
     const amountInput = screen.getByRole('spinbutton');
@@ -17,8 +17,8 @@ describe('Counter', () => {
 
   test('renders a count of 0', () => {
     render(<UserEvent />);
-    const countElement = screen.getByRole('heading');
-    expect(countElement).toHaveTextContent('0');
+    const heading1 = screen.getByRole('heading');
+    expect(heading1).toHaveTextContent('0');
   });
 
   test('renders a count of 1 after clicking the increment button', async () => {

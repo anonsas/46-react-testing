@@ -1,21 +1,21 @@
-import './App.css';
+import Simple from './components/0-Simple/Simple';
+import UserEvent from './components/1-user-event/UserEvent';
+
 import AppProviders from './providers/AppProviders';
 import MuiMode from './components/mui/MuiMode';
-import Application from './components/getBy/Application';
 import Skills from './components/getAllBy/Skills';
-import UserEvent from './components/userEvent/UserEvent';
 import Users from './components/httpRequests/Users';
 
 function App() {
   return (
     <AppProviders>
-      <div className="App">
-        <Application />
-        <Skills skills={['HTML', 'CSS', 'JavaScript']} />
-        {/* <UserEvent /> */}
-        <Users />
+      <>
+        <Simple />
+        <UserEvent />
+        {/*<Skills skills={['HTML', 'CSS', 'JavaScript']} /> */}
+        {/* <Users /> */}
         {/* <MuiMode /> */}
-      </div>
+      </>
     </AppProviders>
   );
 }

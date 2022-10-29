@@ -1,6 +1,6 @@
-function Application() {
+function Simple() {
   return (
-    <>
+    <main>
       <h1>Job application form</h1>
       <h2>Section 1</h2>
       <p>All fields are mandatory</p>
@@ -41,8 +41,8 @@ function Application() {
         </div>
         <button disabled>Submit</button>
       </form>
-    </>
+    </main>
   );
 }
 
-export default Application;
+export default Simple;
