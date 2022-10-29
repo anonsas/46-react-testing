@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <Application />
         <Skills skills={['HTML', 'CSS', 'JavaScript']} />
-        <UserEvent />
+        {/* <UserEvent /> */}
         <Users />
-        <MuiMode />
+        {/* <MuiMode /> */}
       </div>
     </AppProviders>
   );

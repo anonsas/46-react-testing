@@ -5,8 +5,6 @@ describe('Application', () => {
   test('renders', () => {
     render(<Application />);
 
-    /** getByRole */
-
     const pageHeading = screen.getByRole('heading', {
       level: 1,
     });
@@ -35,7 +33,7 @@ describe('Application', () => {
 
     const submitElement = screen.getByRole('button');
     expect(submitElement).toBeInTheDocument();
-    expect(submitElement).not.toBeEnabled();
+    expect(submitElement).toBeDisabled();
 
     /** getByLabelText */
 

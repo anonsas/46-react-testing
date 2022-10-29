@@ -1,0 +1,55 @@
+describe(name, fn) - grouping tests. | .only .skip
+test(name, fn, timeout) | .only .skip
+
+(.only - runs only that test | describe)
+(.skip - skips that test | describe)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Every test() step:
+1. Render the component.  (render)
+2. Find an element rendered by the component. (screen.RTL Query + Suffix)
+3. Assert against the founded element, which will pass or fail?.  (expect(element).matcher())
+--------
+import { render, screen } from '@testing-library/react';
+import Skills from './Skills';
+
+test('Skills', () => {
+  render(<Skills />); 1.
+  const textElement = screen.getByText('Hello World'); 2.
+  expect(textElement).toBeInTheDocument() 3.
+})
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+react-testing-library (RTL) Queries - methods to find elements on the page.
+
+Single Element: 
+  getBy | queryBy | findBy. - returns node that matches query.
+
+Multiple Elements: 
+  getAllBy | queryAllBy | findAllBy. - returns array of all nodes[] that matched query.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+getBy - Returns the node that matches the query. Otherwise Error.
+
+queryBy - Useful for Conditional Rendering, when an element is not in the DOM.
+(Example: expect(screen.queryByText('foo')).not.toBeInTheDocument()).
+Otherwise returns null.
+
+findBy - Useful for Data Fetching, when elements are not present in the DOM,
+but making their way into the DOM after some time.
+Returns a resolved Promise, when an element is found which matches the query.
+Otherwise returns a rejected Promise.
+
+Suffix for RTL query (Grouped By Priority):
+1. Role
+2. LabelText
+3. PlaceHolderText
+4. Text
+5. DisplayValue
+6. AltText
+7. Title
+8. TestId
+
+There is Chrome Extension: Testing Playground.
+Which lets you know and get the exact element's Suffix.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

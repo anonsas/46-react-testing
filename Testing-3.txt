@@ -1,0 +1,32 @@
+Assert against the founded element, which will pass or fail?.  (expect(element).matcher())
+
+test('Skills', () => {
+  render(<Skills />); 
+  const textElement = screen.getByText('Hello World'); 
+  expect(textElement).toBeInTheDocument() - matcher, to test values in different ways.
+})
+
+Commonly used matchers:
+https://jestjs.io/docs/using-matchers
+https://github.com/testing-library/jest-dom
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+User Interactions(click, keypress, etc...)
+fireEvent vs. user-event
+
+fireEvent - method, used to dispatch concrete DOM event.
+user-event - simulates full interaction, which may fire multiple events and do additional checks.
+Allows to describe a user interaction instead of a concrete event. It adds visibility and intractabily 
+checks along the way and manipulates the DOM just like a user interaction in the browser would.
+
+(Example: Input - when a user types into an input, the element has to be focused, and then keyboard
+and input events are fired and the selection and value on input are manipulated as they type).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+user-event is automatically installed in React Projects: "@testing-library/user-event": "^14.4.3"
+React has with version 13, upgrade it to version 14.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+User Interactions:
+Pointer Interactions:
+Keyboard Interactions:

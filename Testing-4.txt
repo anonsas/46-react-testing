@@ -1,0 +1,17 @@
+Static Analysis Testing - proccess of verifying that your code 
+meets certain expectations without actually running it.
+
+"Testing checks if your code works or not. Static Analysis checks if tests are written well or not"
+  1. Ensure consistent style and formatting.
+  2. Check for common mistakes and possible bugs.
+  3. Limit the complexity of code and verify type consistency
+  (readability, consistency, error handling, type checking, alignment).
+
+Static Analysis Testing tools:
+  TypeScript | ESlint | Prettier | Husky | lint-staged
+
+npm i -D eslint-plugin-jest-dom
+npm i -D eslint-config-prettier
+npx husky-init && npm (linter and formatter to run before a commit).
+lint-staged (runs linter and formatter before .git files are staged).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

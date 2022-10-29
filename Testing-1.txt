@@ -1,0 +1,40 @@
+Unit Testing - Testing an individual React Component in isolation, 
+independent of other units. Dependencies are mocked.
+
+Integration Testing - Once all the modules have been Unit Tested, Integration testing is performed.
+Is a type of software testing in which the components of a application are tested as a combined entity. 
+However, these modules may be coded by different programmers.
+
+End-to-end (E2E) Testing - Simulate actual user actions and are designed to test how a real user would likely use the application. 
+It ensures that the code is functional and your app works as intended, allowing you to catch bugs in your code before your app is live.
+Tested in REAL: UI, Database, Services, etc...
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+UNIT TESTING.
+Naming: App.test.tsx | App.spec.tsx | __tests__ (folder).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+What to test in React application?
+  1. Test Component Renders.
+  2. Test Component renders with props.
+  3. Test Component renders in different states.
+  (Login button is Rendered when User is logged-out, and not rendered if user is logged-in).
+  4. Test how Component reacts to events. (Buttons, form, etc...).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+What not to test in React application?
+  1. Test functionality, not implementation details.
+  (Example: /utils/displayDate function. We don't need to test if that function is called 
+  by the component, instead test if the function was rendered in the expected format).
+  2. 3rd Party Code (Example: Material-UI, etc...).
+
+"To avoid testing implementation details is to pretend I'm not a developer, 
+and try to perform a specific task in my application just like a user would."
+
+Examples:
+   Render the form 
+   Find the email field, and enter a random valid email address
+   Find the submit button, and click it
+   Assert that the error message appears
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
